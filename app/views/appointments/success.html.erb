@@ -1,0 +1,29 @@
+<p id="notice"><%= @notice %></p>
+
+
+<p>
+  <strong><%=  'Date' %>:</strong>
+  <%= @appointment.date %>
+</p>
+
+<p>
+  <strong><%=  'Time' %>:</strong>
+  <%= @appointment.time.strftime("%I:%m %p") %>
+</p>
+
+<p>
+  <strong><%=  'Name' %>:</strong>
+  <%= @appointment.client_name %>
+</p>
+
+<p>
+  <strong><%=  'Email' %>:</strong>
+  <%= @appointment.client_email %>
+</p>
+
+<p>
+  <strong><%=  'Phone' %>:</strong>
+  <%= @appointment.client_phone %>
+</p>
+
+

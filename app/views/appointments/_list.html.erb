@@ -1,0 +1,40 @@
+<div class="media">
+  <div class="media-body">
+    
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th><%= t 'Date' %></th>
+      <th><%= t 'Time' %></th>
+      <th><%= t 'Name' %></th>
+      <th><%= t 'Email' %></th>
+      <th><%= t 'Phone Number' %></th>
+      <% if @history %>
+        <th><%= t 'Status' %></th>
+      <% end %>
+      <th colspan="4"></th>
+    </tr>
+      
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.date %></td>
+        <td><%= appointment.time.strftime("%I:%m %p") %></td>
+        <td><%= appointment.client_name %></td>
+        <td><%= appointment.client_email %></td>
+        <td><%= appointment.client_phone %></td>
+        <% if @history %>
+          <td><%= t :"appointment.cancel.#{appointment.status}" %></td>
+        <% end %>
+        <td><%= link_to 'Show', appointment,class: 'btn btn-mini btn-success' %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  </div>
+</div>
+
+<br>

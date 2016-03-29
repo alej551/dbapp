@@ -1,0 +1,66 @@
+<style type="text/css">
+   {
+    width: 800px;
+  }
+  div.field {
+    width: 400px;
+    height: 50px;
+  }
+  div.field_container {
+    float: left;
+    width: 550px;
+  }
+</style>
+
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="panel panel-default">
+    <div class="panel-heading"><h2>Online Scheduling</h2></div>
+    <div class="panel-body">
+  <div class="field_container left">
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.date_field :date %>
+    </div>
+    <div class="field">
+      <%= f.label :time %><br>
+       <%= f.time_select :time,  {ampm: true} %> 
+      
+    </div>
+    
+  
+  </div>  
+ 
+  <div class="field_container right">
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :client_name %>
+    </div>
+    <div class="field">
+      <%= f.label :Email %><br>
+      <%= f.text_field :client_email %>
+    </div>
+    <div class="field">
+      <%= f.label :phone %><br>
+      <%= f.text_field :client_phone %>
+       </div>
+    </div>
+   
+    </div>
+      </div>
+   
+  <div class="actions">
+  
+    <td><%= f.submit 'Create',class: 'btn btn-mini btn-success' %></td>
+  </div>
+<% end %>
