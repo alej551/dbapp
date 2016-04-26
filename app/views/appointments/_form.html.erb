@@ -25,7 +25,7 @@
     </div>
   <% end %>
   <div class="panel panel-default">
-    <div class="panel-heading"><h2>Online Scheduling</h2></div>
+    <div class="panel-heading"><h2>Online Appointment Set Up</h2></div>
     <div class="panel-body">
   <div class="field_container left">
     <div class="field">
@@ -37,7 +37,10 @@
        <%= f.time_select :time,  {ampm: true} %> 
       
     </div>
-    
+    <div class="field">
+      <%= f.label :reason_for_Visit %><br>
+      <%= f.text_field :service%>
+    </div>
   
   </div>  
  
@@ -47,7 +50,7 @@
       <%= f.text_field :client_name %>
     </div>
     <div class="field">
-      <%= f.label :Email %><br>
+      <%= f.label :email %><br>
       <%= f.text_field :client_email %>
     </div>
     <div class="field">
@@ -60,7 +63,6 @@
       </div>
    
   <div class="actions">
-  
-    <td><%= f.submit 'Create',class: 'btn btn-mini btn-success' %></td>
+    <%= f.submit %>
   </div>
 <% end %>

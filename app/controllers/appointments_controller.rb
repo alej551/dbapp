@@ -66,7 +66,7 @@ class AppointmentsController < ApplicationController
     @appointment.create_date = Time.now
     respond_to do |format|
       if @appointment.save
-       
+       @notice = ('The appointment was succesfuly create, you will recieve an email about your appointment confirmation')
         format.html { render :success, notice: ('The appointment was succesfuly create, you will recieve an email about your appointment confirmation') }
         format.json { render :success, status: :ok, location: @appointment }
       else

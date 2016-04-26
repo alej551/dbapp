@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
  
-  resources :appointments
+ resources :appointments
 
   get 'appointments/:id/confirm' => "appointments#confirm", as: :confirm
   get 'appointments/:id/cancel' => "appointments#cancel", as: :cancel

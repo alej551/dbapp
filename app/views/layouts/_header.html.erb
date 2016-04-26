@@ -1,17 +1,23 @@
 <header class="clearfix">
- 
-  
+  <%= link_to root_path, id: 'logo' do %>
+    
+    
+  <% end %>
   <nav>
-    <li>
+      <li>
         <%= link_to 'Home', root_path, class: yield(:page) == 'home' ? 'selected' : nil %>
       </li>
       <li>
         <%= link_to 'About', about_path, class: yield(:page) == 'about' ? 'selected' : nil %>
       </li>
       <li>
-        <%= link_to 'Scheduling', appointments_path, class: yield(:page) == 'appointments' ? 'selected' : nil %>
+        
+        
       </li>
-      
+      </li>
+      <li>
+        <%= link_to 'Online Appointment', new_appointment_path, class: yield(:page) == 'contact' ? 'selected' : nil %>
+  </li>
     </ul>
   </nav>
 </header>

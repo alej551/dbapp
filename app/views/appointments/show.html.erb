@@ -10,23 +10,31 @@
   <strong><%=  'Time' %>:</strong>
   <%= @appointment.time.strftime("%I:%m %p") %>
 </p>
-
+<p>
+  <strong><%=  'Service' %>:</strong>
+  <%= @appointment.service %>
+</p>
 
 <p>
-  <strong><%=  'Name' %>:</strong>
+  <strong><%=  'Patient Name' %>:</strong>
   <%= @appointment.client_name %>
 </p>
 
 <p>
-  <strong><%=  'Email' %>:</strong>
+  <strong><%=  'Patient Email' %>:</strong>
   <%= @appointment.client_email %>
 </p>
 
 <p>
-  <strong><%= 'Phone' %>:</strong>
+  <strong><%= 'Patient Phone' %>:</strong>
   <%= @appointment.client_phone %>
 </p>
 
 
 
+
+<%= link_to ('confirm'), confirm_url(@appointment),class: 'btn btn-mini btn-primary' %>
+<%= link_to ('cancel'), cancel_url(@appointment),class: 'btn btn-mini btn-danger' %>
+<br />
+<%= if @appointment.status == 'new' then link_to ('edit'), edit_appointment_path(@appointment),class: 'btn btn-mini btn-success' end %>
 

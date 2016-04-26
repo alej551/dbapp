@@ -7,6 +7,7 @@ GENERAL
 
 body {
   font-family: 'Open Sans', sans-serif;
+  
 }
 
 #wrapper {
@@ -65,7 +66,7 @@ h1 {
   line-height: 0.8em;
 }
 
-h2 {
+h1 {
   font-size: 1em;
   margin: -5px 0 0;
   font-weight: normal;
@@ -97,6 +98,12 @@ nav a {
   font-weight: 800;
   padding: 15px 10px;
 }
+
+/**********************************
+Home
+***********************************/
+
+
 
 
 
@@ -138,12 +145,7 @@ PAGE: Services
 PAGE: ABOUT
 ***********************************/
 
-.profile-photo {
-  display: block;
-  max-width: 150px;
-  margin: 0 auto 30px;
-  border-radius: 100%;
-}
+
 
 
 
@@ -183,13 +185,13 @@ COLORS
 
 /* site body */
 body {
-  background-color: #fff;
-  color: #999;
+  background-color: #a5daee;
+  color: #a5daee;
 }
 
 /* green header */
 header {
-  background: #06AE00;
+  background: #5d7778;
   border-color: #06AE00;
 }
 
@@ -212,7 +214,7 @@ nav a, nav a:visited {
 
 /* selected nav link */
 nav a.selected, nav a:hover {
-  color: #FF0000;
+  color: #000000;
 }
 
 
